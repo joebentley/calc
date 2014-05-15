@@ -1,0 +1,6 @@
+* Tasks
+** TODO Allow long expressions
+*** TODO Implement order of operations
+*** TODO Allow brackets
+** TODO Implement standard functions
+*** TODO Recognise sqrt(x)
