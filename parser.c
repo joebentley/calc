@@ -51,12 +51,15 @@ int parse(char* in, int len, double* result)
   char operator;
 
   for (int i = 0; i < len; i++) {
-    if (isOperator(in[i])) {
+    // if previous character was 'e' then the minus
+    // or plus is exponential notation++) 
+    if (isOperator(in[i]) && in[i-1] != 'e') {
       operator = in[i];
       pos2 = i + 1; // second number starts here
       number++; 
       continue;
     }
+
     if (number == 0) {
       first[i] = in[i];
     } else if (number == 1) {
